@@ -26,6 +26,9 @@ jobs:
           STRAVA_REFRESH_TOKEN: ${{ secrets.STRAVA_REFRESH_TOKEN }}
         run: ./scripts/fetch-strava.sh
 
+      - name: Show generated JSON
+        run: cat strava.json
+
       - name: Commit and Push Changes
         run: |
           git config --global user.name "github-actions[bot]"
