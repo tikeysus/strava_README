@@ -19,7 +19,7 @@ DISTANCE=$(echo $STATS | jq -r '.ytd_run_totals.distance')
 
 # Convert meters to miles
 # NOTE: Change to 1000 if KM is preferred
-CONVERTED_DISTANCE=$(echo "$DISTANCE / 1609.34" | bc -l)
+CONVERTED_DISTANCE=$(echo "$DISTANCE / 1000" | bc -l)
 
 # Format to 2 decimal places
 FORMATTED_DISTANCE=$(printf "%.2f" $CONVERTED_DISTANCE)
@@ -34,7 +34,7 @@ cat <<EOF > strava.json
 {
   "schemaVersion": 1,
   "label": "$YEAR Distance Ran",
-  "message": "$FORMATTED_DISTANCE miles",
+  "message": "$FORMATTED_DISTANCE kilometres",
   "color": "#FC4C02"
 }
 EOF
