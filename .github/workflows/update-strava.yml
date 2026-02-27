@@ -31,11 +31,9 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-          # Pull latest changes first
           git fetch origin
           git reset --hard origin/main
 
-          # Add new changes
-          git add strava.json
-          git commit -m "Updated Strava stats" || exit 0
+          git add -A
+          git commit -m "Updated Strava stats" || echo "No changes"
           git push

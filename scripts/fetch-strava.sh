@@ -17,7 +17,6 @@ STATS=$(curl -s -H "Authorization: Bearer $ACCESS_TOKEN" https://www.strava.com/
 # NOTE: Change this property to whatever you would like
 DISTANCE=$(echo $STATS | jq -r '.ytd_run_totals.distance')
 
-# Convert meters to miles
 # NOTE: Change to 1000 if KM is preferred
 CONVERTED_DISTANCE=$(echo "$DISTANCE / 1000" | bc -l)
 
