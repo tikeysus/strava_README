@@ -34,6 +34,9 @@ cat <<EOF > strava.json
   "schemaVersion": 1,
   "label": "$YEAR Distance Ran",
   "message": "$FORMATTED_DISTANCE kilometres",
-  "color": "#FC4C02"
+  "color": "#FC4C02",
+  "debug_raw_stats": $STATS,
+  "debug_distance_extracted": "$DISTANCE",
+  "debug_access_token": "${ACCESS_TOKEN:0:20}..."
 }
 EOF
