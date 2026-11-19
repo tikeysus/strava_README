@@ -5,5 +5,5 @@
   "color": "#FC4C02",
   "debug_raw_stats": {"message":"Forbidden","errors":[{"resource":"Application","field":"Status","code":"Inactive"}]},
   "debug_distance_extracted": "null",
-  "debug_access_token": "d5bb880b9ea758be0288..."
+  "debug_access_token": "bf4b5453fff8bd5d7870..."
 }
